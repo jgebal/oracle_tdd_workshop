@@ -27,16 +27,16 @@ SQL
 
 describe 'get employee' do
 
-  it 'returns a single employee for a given id' do
-    expected = plsql.employees.first('where employee_id = :id', 100)
+  it 'returns a single employee record for a given id' do
+    expected = plsql.employees.first('where employee_id = :id', 101)
     expect( plsql.employees_api.get_employee(100) ).to eq(expected)
   end
 
-  it 'returns raised if record is not found' do
+  it 'raises exception if record is not found' do
     expect{ plsql.employees_api.get_employee(-100) }.to raise_exception(/employee.* was not found/)
   end
 
-  it 'returns raises if null value given' do
+  it 'raises exception if null value given' do
     expect{ plsql.employees_api.get_employee(NULL) }.to raise_exception(/Null parameter value given/)
   end
 end
