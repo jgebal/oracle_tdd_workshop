@@ -30,7 +30,7 @@ create or replace package body employees_api as
   function get_employees( p_min_salary integer ) return sys_refcursor is
     v_cursor sys_refcursor;
   begin
-    open v_cursor for select * from employees where salary > p_min_salary;
+    open v_cursor for select * from employees where salary >= p_min_salary;
     return v_cursor;
   end;
 
