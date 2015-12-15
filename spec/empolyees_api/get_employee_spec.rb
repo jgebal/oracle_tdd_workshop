@@ -1,4 +1,4 @@
-require_relative 'get_employees'
+require_relative 'employees_api'
 
 describe 'get employee' do
 
