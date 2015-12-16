@@ -1,2 +1,4 @@
-.idea/*
-coverage/*
+/.idea
+/coverage
+/test-results.html
+
