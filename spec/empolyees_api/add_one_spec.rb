@@ -26,7 +26,7 @@ describe 'Add an employee to the Employees table' do
     expect{
       expect{
         plsql.employees_api.add_one( invalid_employee )
-      }.to raise_exception /cannot insert NULLs/
+      }.to raise_exception /cannot insert NULL/
     }.not_to change(plsql.employees, :all)
   end
 
