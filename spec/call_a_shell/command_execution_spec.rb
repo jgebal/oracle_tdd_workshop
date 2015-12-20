@@ -10,7 +10,8 @@ describe 'invoking sqlplus with a file' do
 
   it 'creates a table from a file' do
     system 'sqlplus hr/hr@xe @spec/call_a_shell/new_table.sql'
-    expect( plsql.new_table ).to be_a(PLSQL::Table)
+    expected_table_columns = [ :id ]
+    expect( plsql.new_table.columns.keys ).to eq( expected_table_columns )
   end
 
 end
