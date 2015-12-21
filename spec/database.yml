@@ -10,6 +10,10 @@ default:
 # Add other connection if needed.
 # You can access them with plsql(:other) where :other is connection name specified below.
 
+hr:
+  username: hr
+  password: hr
+  database: xe
 # other:
 #   username: scott
 #   password: tiger

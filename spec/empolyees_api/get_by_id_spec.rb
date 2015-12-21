@@ -3,8 +3,8 @@ require_relative 'employees_api'
 describe 'get employee' do
 
   it 'returns a single employee record for a given id' do
-    expected = plsql.employees.first('where employee_id = :id', 100)
-    expect( plsql.employees_api.get_by_id(100) ).to eq(expected)
+    expected = plsql(:hr).employees.first('where employee_id = :id', 100)
+    expect( plsql.employees_api.get_by_id(100) ).to eq(NULL)
   end
 
   it 'raises exception if record is not found' do
