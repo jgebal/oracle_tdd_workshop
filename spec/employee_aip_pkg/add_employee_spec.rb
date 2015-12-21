@@ -1,4 +1,4 @@
-# require 'employee_aip_pkg'
+require 'employee_aip_pkg'
 
 describe 'Add employee' do
   # include EmployeeFactory
